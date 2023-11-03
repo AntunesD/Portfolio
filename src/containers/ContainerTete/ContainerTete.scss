@@ -1,0 +1,25 @@
+.containerTete {
+    margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  & .position-bulle {
+    position: relative;
+left: 220px;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .containerTete   .position-bulle {
+      top :-40px ;
+      left: 0;
+    }
+    .comic-bubble::before  {
+       left: 200px;
+       bottom: -30px;
+     }
+}

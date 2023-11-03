@@ -1,0 +1,161 @@
+@import "../../utils/variables.scss";
+
+/*animation*/
+
+/*déplacement de l'ensemble*/
+
+@keyframes MouvementOeilNez {
+  0% {
+    transform: translateX(0);
+  }
+  6%,
+  10% {
+    transform: translateX(-20px);
+  }
+  16% {
+    transform: translateX(0);
+  }
+
+  23%,
+  26% {
+    transform: translateX(15px);
+  }
+  33% {
+    transform: translateX(0);
+  }
+}
+
+.oeil,
+.nez {
+  animation: MouvementOeilNez $TempsAnimation ease-in-out infinite;
+}
+/*déplacement de l'iris*/
+
+@keyframes MouvementEris {
+  0% {
+    transform: translateX(0);
+  }
+  6%,
+  10% {
+    transform: translateX(-5px);
+  }
+  16% {
+    transform: translateX(0);
+  }
+
+  23%,
+  26% {
+    transform: translateX(3px);
+  }
+  33% {
+    transform: translateX(0);
+  }
+}
+
+.eris {
+  animation: MouvementEris $TempsAnimation ease-in-out infinite;
+}
+
+/*reduction bouche  */
+
+@keyframes MouvementBouche {
+  0% {
+    transform: translateX(0);
+  }
+  6%,
+  10% {
+    transform: translateX(-20px);
+  }
+  16% {
+    transform: translateX(0);
+  }
+
+  23%,
+  26% {
+    transform: translateX(15px) scaleX(0.8);
+  }
+  33% {
+    transform: translateX(0);
+  }
+}
+
+.bouche {
+  animation: MouvementBouche $TempsAnimation ease-in-out infinite;
+}
+
+/*oreille*/
+
+@keyframes MouvementOreilleGauche {
+  0% {
+    transform: translateX(0);
+  }
+  6%,
+  10% {
+    transform: translateX(10px);
+  }
+  16% {
+    transform: translateX(0);
+  }
+}
+
+.oreille-gauche {
+  animation: MouvementOreilleGauche $TempsAnimation ease-in-out infinite;
+}
+
+@keyframes MouvementDroite {
+  16% {
+    transform: translateX(0);
+  }
+
+  23%,
+  26% {
+    transform: translateX(-8px);
+  }
+  33% {
+    transform: translateX(0);
+  }
+}
+
+.oreille-droite {
+  animation: MouvementDroite $TempsAnimation ease-in-out infinite;
+}
+
+/*animation clignement*/
+
+@keyframes clignement {
+  0% {
+    transform: scale(0);
+  }
+
+  6% {
+    transform: rotate(90deg) scaleY(1);
+  }
+  8% {
+    transform: rotate(90deg) scaleX(-8);
+  }
+  10% {
+    transform: rotate(90deg) scaleY(1);
+  }
+
+  11% {
+    transform: scale(0);
+  }
+
+  70% {
+    transform: rotate(90deg) scaleY(1);
+  }
+  72% {
+    transform: rotate(90deg) scaleX(-8);
+  }
+  74% {
+    transform: rotate(90deg) scaleY(1);
+  }
+
+  75% {
+    transform: scale(0);
+  }
+}
+
+.oeil::after {
+  animation: clignement 10s ease-in-out infinite;
+}

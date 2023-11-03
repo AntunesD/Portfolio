@@ -1,0 +1,125 @@
+/* Style les bulle a logo */
+.bulle {
+  margin: 30px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+
+  &:hover {
+    img,
+    .ball,
+    .bulleFond {
+      animation: bubble-anim 2s ease-out infinite;
+    }
+  }
+
+  img {
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+    max-height: 60%;
+    max-width: 70%;
+    min-width: 60%;
+    opacity: 0.7;
+  }
+}
+
+/* background de la bullu */
+.bulleFond {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: black;
+  background: radial-gradient(
+    circle at 50% 55%,
+    rgba(240, 245, 255, 0.9),
+    rgba(240, 245, 255, 0.9) 40%,
+    rgba(225, 238, 255, 0.8) 60%,
+    rgba(43, 130, 255, 0.4)
+  );
+}
+
+/* devant de la bulle a logo*/
+.ball {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
+    background: radial-gradient(
+      circle at top,
+      white,
+      rgba(255, 255, 255, 0) 58%
+    );
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+  }
+
+  &.bubble:before {
+    height: 80%;
+    width: 40%;
+    background: radial-gradient(
+      circle at 130% 130%,
+      rgba(255, 255, 255, 0) 0,
+      rgba(255, 255, 255, 0) 46%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0.8) 58%,
+      rgba(255, 255, 255, 0) 60%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: translateX(131%) translateY(58%) rotateZ(168deg) rotateX(10deg);
+  }
+
+  &.bubble:after {
+    display: block;
+    background: radial-gradient(
+      circle at 50% 80%,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0) 74%,
+      white 80%,
+      white 84%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+
+/* animation de la bulle a logo */
+@keyframes bubble-anim {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scaleY(0.95) scaleX(1.05);
+  }
+  48% {
+    transform: scaleY(1.1) scaleX(0.9);
+  }
+  68% {
+    transform: scaleY(0.98) scaleX(1.02);
+  }
+  80% {
+    transform: scaleY(1.02) scaleX(0.98);
+  }
+  97%,
+  100% {
+    transform: scale(1);
+  }
+}

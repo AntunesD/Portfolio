@@ -1,0 +1,16 @@
+#Competences {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.competences {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  & p {
+    text-align: center;
+  }
+}

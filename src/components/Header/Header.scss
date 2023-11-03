@@ -1,0 +1,33 @@
+@import "../../utils/variables.scss";
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & h1 {
+    font-family: "Yellowtail", cursive;
+    margin-left: 10px;
+    color: $PrimaryColor;
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+    & li {
+      margin: 0 10px;
+    }
+  }
+
+  & a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,154 @@
+@import "../../utils/variables.scss";
+
+#Portfolio {
+  & h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+#carousel {
+  background: radial-gradient(
+    ellipse at center,
+    $PrimaryColor 25%,
+    rgba($PrimaryColor, 0.4) 50%,
+    rgba(255, 255, 255, 1) 72%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
+  & .carousel_back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+  }
+  position: relative;
+  height: 500px;
+  top: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  & .slider {
+    transition: transform 1s, left 1s, opacity 1s, z-index 0s, width 1s;
+    opacity: 1;
+    
+
+    &.hideLeft {
+      position: absolute;
+      left: 0%;
+      opacity: 0;
+      transform: translateY(10%) translateX(-50%) scale(0.75);
+    }
+
+    &.hideRight {
+      position: absolute;
+      left: 100%;
+      opacity: 0;
+      transform: translateY(10%) translateX(-50%) scale(0.5);
+    }
+
+    &.prev {
+      position: absolute;
+      z-index: 2;
+      left: 30%;
+      transform: translateY(10px) translateX(-50%) scale(0.75);
+    }
+
+    &.prevLeftSecond {
+      position: absolute;
+      z-index: 1;
+      left: 15%;
+      transform: translateY(10%) translateX(-50%) scale(0.5);
+      opacity: 0.7;
+    }
+
+    &.selected {
+      position: absolute;
+      z-index: 3;
+      left: calc(50% - ($TotalCard/ 2));
+      transform: translateY(0px) translateX(var(--touchDelta, 0)) scale(1);
+    }
+
+    &.next {
+      position: absolute;
+      z-index: 2;
+      left: 70%;
+      transform: translateY(10px) translateX(-50%) scale(0.75);
+    }
+
+    &.nextRightSecond {
+      position: absolute;
+      z-index: 1;
+      left: 85%;
+      transform: translateY(10%) translateX(-50%) scale(0.5);
+      opacity: 0.7;
+    }
+  }
+}
+
+#Portfolio {
+  position: relative;
+}
+
+.buttons-right,
+.buttons-left {
+  color: $PrimaryColor;
+  font-size: 100px;
+  z-index: 4;
+  position: absolute;
+  top: 50%;
+  transition: transform 0.3s;
+}
+
+.buttons-right {
+  right: 20px;
+}
+
+.buttons-left {
+  left: 20px;
+}
+
+.buttons-right:hover,
+.buttons-left:hover {
+  transform: scale(1.2);
+}
+
+.buttons-right:active,
+.buttons-left:active {
+  transform: scale(0.8);
+}
+
+@media (max-width: 768px) {
+  .prevLeftSecond,
+  .nextRightSecond {
+    display: none;
+  }
+  #carousel .slider.prev,
+  #carousel .slider.next {
+    opacity: 0;
+  }
+
+  .buttons-right,
+  .buttons-left {
+    opacity: 0.4;
+    font-size: 150px;
+    animation: scaleAnimation 1s infinite alternate ease-in-out;
+  }
+
+}
+
+@media (max-width: 350px) {
+  #carousel .slider.selected {
+    left: calc(50% - (270px / 2));
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

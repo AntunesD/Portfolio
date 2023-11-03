@@ -1,0 +1,105 @@
+$Peau: #edb98a;
+$Bouche: #765c45;
+$TempsAnimation: 30s;
+$PrimaryColor: #867060;
+// $PrimaryColor: #ffcba4;
+$CSSColor1: #254bdd;
+$CSSColor2: #2862e9;
+$HTMLColor1: #dd4b25;
+$HTMLColor2: #e96228;
+
+$BackgroundReact: linear-gradient(
+  32deg,
+  rgba(97, 218, 251, 1) 0%,
+  rgba(97, 218, 251, 1) 12%,
+  rgba(255, 255, 255, 1) 25%,
+  rgba(97, 218, 251, 1) 37%,
+  rgba(97, 218, 251, 1) 50%,
+  rgba(97, 218, 251, 1) 62%,
+  rgba(255, 255, 255, 1) 75%,
+  rgba(97, 218, 251, 1) 87%,
+  rgba(97, 218, 251, 1) 100%
+);
+
+$BackgroundBodercard: linear-gradient(
+  32deg,
+  $PrimaryColor 0%,
+  $PrimaryColor 12%,
+  white 25%,
+  $PrimaryColor 37%,
+  $PrimaryColor 50%,
+  $PrimaryColor 62%,
+  white 75%,
+  $PrimaryColor 87%,
+  $PrimaryColor 100%
+);
+
+$BackgroundSass: linear-gradient(
+  32deg,
+  rgba(204, 102, 153, 1) 0%,
+  rgba(204, 102, 153, 1) 12%,
+  rgba(255, 255, 255, 1) 25%,
+  rgba(204, 102, 153, 1) 37%,
+  rgba(204, 102, 153, 1) 50%,
+  rgba(204, 102, 153, 1) 62%,
+  rgba(255, 255, 255, 1) 75%,
+  rgba(204, 102, 153, 1) 87%,
+  rgba(204, 102, 153, 1) 100%
+);
+
+$BackgroundSEO: linear-gradient(
+  32deg,
+  rgba(192, 192, 192, 1) 0%,
+  rgba(192, 192, 192, 1) 12%,
+  rgba(255, 255, 255, 1) 25%,
+  rgba(192, 192, 192, 1) 37%,
+  rgba(192, 192, 192, 1) 50%,
+  rgba(192, 192, 192, 1) 62%,
+  rgba(255, 255, 255, 1) 75%,
+  rgba(192, 192, 192, 1) 87%,
+  rgba(192, 192, 192, 1) 100%
+);
+
+$BackgroundDebug: linear-gradient(
+  32deg,
+  rgba(0, 0, 0, 1) 0%,
+  rgba(255, 0, 0, 1) 12%,
+  rgba(255, 255, 255, 1) 25%,
+  rgba(255, 0, 0, 1) 37%,
+  rgba(0, 0, 0, 1) 50%,
+  rgba(255, 0, 0, 1) 62%,
+  rgba(255, 255, 255, 1) 75%,
+  rgba(255, 0, 0, 1) 87%,
+  rgba(0, 0, 0, 1) 100%
+);
+
+$BackgroundRedux: linear-gradient(
+  32deg,
+  rgba(118, 74, 188, 1) 0%,
+  rgba(118, 74, 188, 1) 12%,
+  rgba(255, 255, 255, 1) 25%,
+  rgba(118, 74, 188, 1) 37%,
+  rgba(118, 74, 188, 1) 50%,
+  rgba(118, 74, 188, 1) 62%,
+  rgba(255, 255, 255, 1) 75%,
+  rgba(118, 74, 188, 1) 87%,
+  rgba(118, 74, 188, 1) 100%
+);
+
+$BackgroundImg: linear-gradient(
+  32deg,
+  white 0%,
+  gray 12%,
+  gray 25%,
+  rgba(255, 255, 255, 1) 37%,
+  gray 50%,
+  gray 62%,
+  gray 75%,
+  rgba(255, 255, 255, 1) 87%,
+  gray 100%
+);
+
+/**pour le cards **/
+$CardWidth : 300px;
+$CardPadding : 10px;
+$TotalCard : $CardWidth + ($CardPadding * 2);

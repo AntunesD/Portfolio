@@ -7,7 +7,7 @@ function SectionTete() {
     return (
         <div className="containerTete">
             <div className="position-bulle">
-            <BullComics/>
+            <BullComics texte="Salut ! Je suis entièrement fait en CSS"/>
             </div>
             <Tete/>
         </div>

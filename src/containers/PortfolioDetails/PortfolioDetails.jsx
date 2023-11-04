@@ -57,7 +57,7 @@ function PortfolioDetails() {
             <div className="liens">
               {window.innerWidth < 768 ? (
                 <a href={modal.gitHub} target="_blank" rel="noreferrer">
-                  <img src="/Logo/github-mark.png" alt="GitHub" />
+                  <img src="./Logo/github-mark.png" alt="GitHub" />
                 </a>
               ) : (
                 <a href={modal.gitHub} target="_blank" rel="noreferrer">
@@ -68,7 +68,7 @@ function PortfolioDetails() {
               {modal.gitPage && (
                 window.innerWidth < 768 ? (
                   <a href={modal.gitPage} target="_blank" rel="noreferrer">
-                    <img className="gitpage" src="/Logo/Github-pages.svg" alt="GitHub Pages" />
+                    <img className="gitpage" src="./Logo/Github-pages.svg" alt="GitHub Pages" />
                   </a>
                 ) : (
                   <a href={modal.gitPage} target="_blank" rel="noreferrer">

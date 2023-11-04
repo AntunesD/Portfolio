@@ -14,6 +14,7 @@ function Accueil() {
                 key={index}
                 name={outil.nom}
                 logo={outil.logo}
+                definition={outil.definition}
                 />
                 ))}
                 </div>

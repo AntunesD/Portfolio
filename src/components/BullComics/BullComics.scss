@@ -1,12 +1,11 @@
 /*Bulle bande déssiné*/
 
 .comic-bubble {
-  width: 260px;
-  height: 50px;
+  width: 100%;  
   background-color: #fff;
   border: 2px solid #000;
   border-radius: 10px;
-  padding: 10px;
+  padding: 0 10px;
   position: relative;
 }
 
@@ -25,31 +24,17 @@
   transform: rotate(45deg);
 }
 
-/*Texte de la bulle*/
-
-.comic-text {
-  font-size: 16px;
-  animation: typing 15s steps(90) infinite;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #000;
-  padding-right: 10px;
-  display: inline-block;
+.comic-bubble::after {
+  content: "";
+  display: none;
+  position: absolute;
+  bottom: -25px;
+  border-left: 10px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 40px solid black;
+  right: -10px;
+  border-top-right-radius: 80%;
+  border-top-left-radius: 20%;
+  transform: rotate(-45deg) ;
 }
 
-/*Animation de la bulle*/
-
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  10% {
-    width: 100%;
-  }
-  85% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}

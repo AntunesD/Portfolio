@@ -7,6 +7,7 @@ const ProjetList = () => {
     const [selectedIndex, setSelectedIndex] = useState(3); // Index de l'élément "selected"
     const touchStartX = useRef(null);
     const touchDeltaX = useRef(0);
+    const carouselRef = useRef(null);
 
     const moveToSelected = (index) => {
         setSelectedIndex(index);
@@ -38,6 +39,11 @@ const ProjetList = () => {
     /**pour le swipe */
     const handleTouchStart = (e) => {
         touchStartX.current = e.touches[0].clientX;
+         // Ajouter la classe pour désactiver la transition dans chaque carte
+         const cards = carouselRef.current.querySelectorAll('.slider');
+         cards.forEach((card) => {
+             card.classList.add('no-slider-transition');
+         });
     };
 
     const handleTouchMove = (e) => {
@@ -60,13 +66,18 @@ const ProjetList = () => {
         touchDeltaX.current = 0;
         // Rétablir la transition
         document.documentElement.style.setProperty('--touchDelta', '0');
+        // Rétablir la transition dans chaque carte
+        const cards = carouselRef.current.querySelectorAll('.slider');
+        cards.forEach((card) => {
+            card.classList.remove('no-slider-transition');
+        });
     };
 
     return (
         <section id='Portfolio' >
             <h2>Portfolio</h2>
                 <i  id="prev" onClick={handlePrevClick} className=" buttons-left fa-solid fa-chevron-left"></i>
-            <div id="carousel" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}  onTouchEnd={handleTouchEnd}>
+            <div id="carousel" ref={carouselRef} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}  onTouchEnd={handleTouchEnd}>
                 {ProjetData.map((projet, index) => (
                     <ProjetCard
                         key={index}

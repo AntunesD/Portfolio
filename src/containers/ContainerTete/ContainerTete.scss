@@ -1,25 +1,54 @@
 .containerTete {
-    margin-top: 60px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 200px;
   & .position-bulle {
     position: relative;
-left: 220px;
+    left: 220px;
+    width: 260px;
+  }
+  & .comic-text {
+    font-size: 16px;
+    animation: typing 15s steps(90) infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #000;
+    padding-right: 10px;
+    display: inline-block;
+  }
+}
+
+/*Animation de la bulle*/
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  10% {
+    width: 100%;
+  }
+  85% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
   }
 }
 
 
-
-
 @media (max-width: 768px) {
-  .containerTete   .position-bulle {
-      top :-40px ;
-      left: 0;
+  .containerTete .position-bulle {
+    top: -40px;
+    left: 0;
+    & .comic-bubble::before {
+      left: 200px;
+      bottom: -30px;
     }
-    .comic-bubble::before  {
-       left: 200px;
-       bottom: -30px;
-     }
+    
+    & .position-bulle  {
+      width: 100%;
+    }
+  }
 }

@@ -1,9 +1,9 @@
 import "./BullComics.scss"
 
-function BullComics() {
+function BullComics({texte}) {
     return (
         <div className="comic-bubble">
-            <p className="comic-text">Salut ! Je suis entièrement fait en CSS</p>
+            <p className="comic-text">{texte}</p>
         </div>
     )
 }

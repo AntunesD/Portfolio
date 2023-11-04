@@ -53,6 +53,7 @@
     background: $BackgroundBodercard;
     border-radius: 15px;
     padding: 10px;
+    position: relative;
   }
   & .projet {
     display: flex;
@@ -87,5 +88,24 @@
 }
 
 @media (max-width: 768px) {
-
+.modal {
+  padding: 7px 0;
+  & .bord {
+    padding: 7px;
+  }
+  & .projet {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    padding: 5px;
+  }
+  & .contenue {
+    text-align: justify;
+  }
+  button {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+}
 }

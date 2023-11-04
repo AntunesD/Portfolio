@@ -14,3 +14,17 @@
     text-align: center;
   }
 }
+
+@media (max-width: 768px) {
+  .competences {
+    width: 100%;
+    justify-content: center;
+  }
+  .bulle-comics-sur-bulle {
+    left: 0;
+    width: 100%;
+    & .comic-bubble::before{
+      left: 50%;
+    }
+  }
+}

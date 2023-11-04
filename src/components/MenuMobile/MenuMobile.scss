@@ -107,11 +107,11 @@ $menuItems: 5;
           transition-delay: 0.2s;
 
           &.topBar {
-            transform: translateY(4px) rotate(45deg);
+            transform: translateY(1px) rotate(45deg);
           }
 
           &.btmBar {
-            transform: translateY(3px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg);
           }
         }
       }

@@ -17,6 +17,8 @@
 .fincard {
   position: absolute;
   bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 7px;
   opacity: 0.5;
 }

@@ -4,11 +4,9 @@ import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import 'highlight.js/styles/vs2015.css';
-import hljs from 'highlight.js';
 import store from "./redux/store";
 import { Provider } from "react-redux";
 
-hljs.highlightAll();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

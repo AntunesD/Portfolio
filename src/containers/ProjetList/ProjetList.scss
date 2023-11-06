@@ -1,7 +1,10 @@
 @import "../../utils/variables.scss";
 
 #Portfolio {
-  & h2 {
+  .Portfolio_titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-bottom: 50px;
   }
@@ -12,8 +15,8 @@
     ellipse at center,
     $PrimaryColor 25%,
     rgba($PrimaryColor, 0.4) 50%,
-    rgba(255, 255, 255, 1) 72%,
-    rgba(255, 255, 255, 1) 100%
+    $SecondColor 72%,
+    $SecondColor 100%
   );
 
   & .carousel_back {
@@ -101,11 +104,11 @@
 }
 
 .buttons-right {
-  right: 20px;
+  right: 50px;
 }
 
 .buttons-left {
-  left: 20px;
+  left: 50px;
 }
 
 .buttons-right:hover,
@@ -116,6 +119,38 @@
 .buttons-right:active,
 .buttons-left:active {
   transform: scale(0.8);
+}
+
+.fleche-droite-haut {
+  height: 20px;
+  background-color: $PrimaryColor;
+  width: 110px;
+  border-radius: 20px;
+  transform: rotate(45deg) translateX(40px) ;
+}
+
+.fleche-droite-bas {
+  height: 20px;
+  background-color: $PrimaryColor;
+  width: 110px;
+  border-radius: 20px;
+  transform: rotate(-45deg) translateY(72px)  translateX(-31px);
+}
+
+.fleche-gauche-haut {
+  height: 20px;
+  background-color: $PrimaryColor;
+  width: 110px;
+  border-radius: 20px;
+  transform: rotate(135deg) translateX(40px) ;
+}
+
+.fleche-gauche-bas {
+  height: 20px;
+  background-color: $PrimaryColor;
+  width: 110px;
+  border-radius: 20px;
+  transform: rotate(-135deg) translateY(-72px)  translateX(-31px);
 }
 
 @media (max-width: 768px) {
@@ -134,6 +169,27 @@
     font-size: 150px;
     animation: scaleAnimation 1s infinite alternate ease-in-out;
   }
+  .buttons-right {
+    right: 18px;
+    & .fleche-droite-bas {
+      
+      transform: rotate(-60deg) translateY(72px)  translateX(-49px);
+    }
+    & .fleche-droite-haut { 
+      transform: rotate(60deg) translateY(-23px)  translateX(35px);
+    }
+  }
+  .buttons-left {
+    left: 18px;
+    & .fleche-gauche-bas {
+      
+      transform: rotate(-120deg) translateY(-72px)  translateX(-49px);
+    }
+    & .fleche-gauche-haut { 
+      transform: rotate(120deg) translateY(23px)  translateX(35px);
+    }
+  }
+
 }
 
 @media (max-width: 350px) {

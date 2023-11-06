@@ -75,8 +75,13 @@ const ProjetList = () => {
 
     return (
         <section id='Portfolio' >
+            <div className='Portfolio_titre'>
             <h2>Portfolio</h2>
-                <i  id="prev" onClick={handlePrevClick} className=" buttons-left fa-solid fa-chevron-left"></i>
+            </div>
+            <div id="prev" onClick={handlePrevClick} className='buttons-left'>
+                <div className='fleche-gauche-haut' ></div>
+                <div className='fleche-gauche-bas'></div>
+            </div>
             <div id="carousel" ref={carouselRef} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}  onTouchEnd={handleTouchEnd}>
                 {ProjetData.map((projet, index) => (
                     <ProjetCard
@@ -108,7 +113,11 @@ const ProjetList = () => {
                     </ProjetCard>
                 ))}
             </div>
-            <i id="next" onClick={handleNextClick} className=" buttons-right  fa-solid fa-chevron-right"></i>
+           
+            <div id="next"  onClick={handleNextClick} className='buttons-right'>
+                <div className='fleche-droite-haut' ></div>
+                <div className='fleche-droite-bas'></div>
+            </div>
         </section>
     );
 };

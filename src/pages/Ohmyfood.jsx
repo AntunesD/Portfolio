@@ -1,33 +1,59 @@
 import "./Pages.scss";
 import React, { useEffect } from "react";
 import hljs from 'highlight.js';
+import outilArray from "../data/OutilsArray";
+import Bulle from "../components/Bulle/Bulle";
 
 function Ohmyfood() {
 
-    useEffect(() => {
-        // Activer Highlight.js une fois que le composant est monté
-        hljs.highlightAll();
-    }, []);
+  const filterOutilsParNoms = (nomsRecherche) => {
+    return outilArray.filter((outil) => nomsRecherche.includes(outil.nom));
+  };
 
-    return (
-        <section>
-            <div>
-                <h2>Améliorez l'interface d'un site mobile avec des animations CSS</h2>
-                <b> Vous trouverez également les liens vers le dépôt Github et le GitPage juste en dessous de cette fenêtre.</b>
-                <p>Ohmyfood était un projet réalisé dans le cadre du parcours de formation d'OpenClassrooms visant à améliorer l'interface d'un site mobile avec des animations CSS. Le projet consiste à développer un site "mobile first" pour une startup de restauration gastronomique qui souhaite s'implanter à Paris. Le site permettra aux clients de découvrir les menus des restaurants gastronomiques partenaires, de composer leur menu personnalisé et de réserver leur repas, afin d'éviter les attentes au restaurant.</p>
-                <p>Dans cet article, nous verrons tout ce qui a été mis en place par l'étudiant.</p>
+  const nomsRecherche = ["HTML", "CSS", "Sass"];
+  const outilsFiltres = filterOutilsParNoms(nomsRecherche);
 
 
+  useEffect(() => {
+    // Activer Highlight.js une fois que le composant est monté
+    hljs.highlightAll();
+  }, []);
 
-                <h3>Les animations </h3>
-                <p>Ce projet nécessite plusieurs animations, notamment le chargement, les likes, l'arrivée des plats dans le menu et la sélection des plats. </p>
-                <h4 className="flexrow">Le Loader
-                    <img className="imgFood" src="./Image/ohmyfood/LoaderGif.gif" alt="animation du loader" />
-                </h4>
-                <p>Le Loader a était fait avec des &lt;span&gt; </p>
-                <pre>
-                    <code className="html">
-                        {` <div class="loader">
+  return (
+    <section>
+      <div>
+        <h2>Améliorez l'interface d'un site mobile avec des animations CSS</h2>
+        <b>Competences utilisées :</b>
+        <div className="competences-pour-se-projet" >
+          {outilsFiltres.map((outil, index) => (
+            <div key={index}>
+              <Bulle logo={outil.logo} />
+            </div>
+          ))}
+        </div>
+        <b> Vous trouverez également les liens vers le dépôt Github et
+          le GitPage juste en dessous de cette fenêtre.</b>
+        <p><b>Ohmyfood</b> était un projet réalisé dans le cadre du parcours
+          de formation d'<b>OpenClassrooms</b> visant à améliorer l'interface
+          d'un site mobile avec des animations <b>CSS</b>. Le projet consiste à
+          développer un site <b>"mobile first"</b> pour une startup de restauration
+          gastronomique qui souhaite s'implanter à Paris. Le site permettra
+          aux clients de découvrir les menus des restaurants gastronomiques
+          partenaires, de composer leur menu personnalisé et de réserver
+          leur repas, afin d'éviter les attentes au restaurant.</p>
+        <p>Dans cet article, nous verrons tout ce qui a été mis en place par <b>David J. Antunes</b>.</p>
+
+
+        <h3>Les animations </h3>
+        <p>Ce projet nécessite plusieurs animations, notamment le chargement,
+          les likes, l'arrivée des plats dans le menu et la sélection des plats. </p>
+        <h4 className="flexrow">Le Loader
+          <img className="imgFood" src="./Image/ohmyfood/LoaderGif.gif" alt="animation du loader" />
+        </h4>
+        <p>Le Loader a était fait avec des <b>&lt;span&gt;</b> </p>
+        <pre>
+          <code className="html">
+            {` <div class="loader">
       <span>O</span>
       <span>h</span>
       <span>m</span>
@@ -37,12 +63,16 @@ function Ohmyfood() {
       <span>o</span>
       <span>d</span>
       </div>`}
-                    </code>
-                </pre>
-                <p>Puis, en utilisant CSS avec Sass, ils ont été animés avec un keyframes qui donne une rotation de 360 degrés, une perspective pour donner plus de réalisme, une origine de transformation pour éviter qu'ils ne tournent sur eux-mêmes, et un délai pour chacune des lettres.</p>
-                <pre>
-                    <code className="scss">
-                        {`@keyframes flip{
+          </code>
+        </pre>
+        <p>Puis, en utilisant <b>CSS</b> avec <b>Sass</b>, ils ont été animés avec
+         un <b>keyframes</b> qui donne une rotation de 360 degrés,
+          une <b>perspective</b> pour donner
+          plus de réalisme, une <b>origine de transformation</b> pour éviter qu'ils
+          ne tournent sur eux-mêmes, et un délai pour chacune des lettres.</p>
+        <pre>
+          <code className="scss">
+            {`@keyframes flip{
   35%{
     transform: rotateX(360deg);
   }
@@ -87,26 +117,28 @@ function Ohmyfood() {
       }
   }
 }`}
-                    </code>
-                </pre>
-                <h4 className="flexrow">Les likes
-                    <img className="imgFood" src="./Image/ohmyfood/LikeGif.gif" alt="animation like" />
+          </code>
+        </pre>
+        <h4 className="flexrow">Les likes
+          <img className="imgFood" src="./Image/ohmyfood/LikeGif.gif" alt="animation like" />
 
-                </h4>
-                <p >Les likes ont était fait avec une checkbox qui change de label</p>
-                <pre>
-                    <code className="html">
-                        {`<input type="checkbox" class="jaime" id="jaime">
+        </h4>
+        <p >Les likes ont était fait avec une <b>checkbox</b> qui change de <b>label</b></p>
+        <pre>
+          <code className="html">
+            {`<input type="checkbox" class="jaime" id="jaime">
         <label class="label" for="jaime">
             <span class="jaime__1"><i class="fa-regular fa-heart"></i></span>
             <span class="jaime__2"><i class="fa-solid fa-heart"></i></span>
         </label>`}
-                    </code>
-                </pre>
-                <p>Puis, la boîte a été masquée, les éléments ont été superposés en utilisant une position absolue, l'opacité a été modifiée, et enfin, une transition plus douce a été ajoutée.</p>
-                <pre>
-                    <code className="scss">
-                        {`.jaime {
+          </code>
+        </pre>
+        <p>Puis, la boîte a été masquée, les éléments ont été superposés en
+          utilisant une <b>position absolue</b>, l'<b>opacité</b> a été modifiée, et enfin,
+          une <b>transition</b> plus douce a été ajoutée.</p>
+        <pre>
+          <code className="scss">
+            {`.jaime {
   display: none;
 
   &__1 {
@@ -128,23 +160,28 @@ function Ohmyfood() {
     opacity: 1;
   }
 }`}
-                    </code>
-                </pre>
-                <h4 className="flexrow"> L'arrivée des plats <img className="imgFood" src="./Image/ohmyfood/PlatGif.gif" alt="animation d'arrivé des plat" /> </h4>
-                <p>L'arrivée des plats a été réalisée à l'aide d'une liste &lt;ul&gt; .</p>
-                <pre>
-                    <code className="html">
-                        {`<ul>
+          </code>
+        </pre>
+        
+        <h4 className="flexrow mobile--flexColumn"> L'arrivée des plats <img className="imgFood" src="./Image/ohmyfood/PlatGif.gif" alt="animation d'arrivé des plat" /> </h4>
+        <p>L'arrivée des plats a été réalisée à l'aide d'une liste <b>&lt;ul&gt;</b> .</p>
+        <pre>
+          <code className="html">
+            {`<ul>
     <li>Premier plat</li>
     <li>Second plat</li>
     <li>Troisième plat</li>
 </ul>`}
-                    </code>
-                </pre>
-                <p>Puis en CSS, les éléments &lt;li&gt; ont été positionnés à gauche, puis avec une animation keyframes, ils ont été ramenés un par un à leur position normale, en utilisant également un délai pour chacun des éléments &lt;li&gt; , et des fonctions de temporisation 'ease-in-out' pour des animations plus douces.</p>
-                <pre>
-                    <code className="scss">
-                        {`@keyframes showRectangles {
+          </code>
+        </pre>
+        <p>Puis en <b>CSS</b>, les éléments <b>&lt;li&gt;</b> ont été positionnés à gauche,
+          puis avec une animation <b>keyframes</b>, ils ont été ramenés un par un
+          à leur position normale, en utilisant également un <b>délai</b> pour chacun
+          des éléments <b>&lt;li&gt;</b> , et des fonctions de temporisation
+          <b> 'ease-in-out'</b> pour des animations plus douces.</p>
+        <pre>
+          <code className="scss">
+            {`@keyframes showRectangles {
     to {
       opacity: 1;
       transform: translateX(0);
@@ -168,22 +205,25 @@ function Ohmyfood() {
       animation: showRectangles 2s 0.3s forwards;
     }
   }`}
-                    </code>
-                </pre>
-                <h4 className="flexrow" >Les coches<img className="imgFood" src="./Image/ohmyfood/CocheGig.gif" alt="animation selection des plats" /></h4>
-                <p>Pour les coches, il était demandé de les faire apparaître au survol du curseur.</p>
-                <pre>
-                    <code className="html">
-                        {`<div class="container">
+          </code>
+        </pre>
+        
+        <h4 className="flexrow mobile--flexColumn" >Les coches<img className="imgFood" src="./Image/ohmyfood/CocheGig.gif" alt="animation selection des plats" /></h4>
+        <p>Pour les coches, il était demandé de les faire apparaître au <b>survol</b> du curseur.</p>
+        <pre>
+          <code className="html">
+            {`<div class="container">
         <h1>Le titre du plat</h1>
         <div class="coche">Le signe</div>
     </div>`}
-                    </code>
-                </pre>
-                <p>Donc, ils ont été initiés avec une largeur de 0 et une propriété d'overflow pour cacher le contenu, puis, avec une transition lors du survol du parent, la largeur a été augmentée. </p>
-                <pre>
-                    <code className="scss">
-                        {`.container {
+          </code>
+        </pre>
+        <p>Donc, ils ont été initiés avec une <b>largeur</b> de 0 et une propriété
+          d'<b>overflow</b> pour cacher le contenu, puis, avec une <b>transition</b> lors
+          du survol du parent, la <b>largeur</b> a été augmentée. </p>
+        <pre>
+          <code className="scss">
+            {`.container {
   display: flex;
 
   & .coche {
@@ -199,19 +239,23 @@ function Ohmyfood() {
   }
 }
 `}
-                    </code>
-                </pre>
-                <h4 className="flexrow" >Les bouttons<img className="imgFood" src="./Image/ohmyfood/ButtonGif.gif" alt="animation d'un boutton" /></h4>
-                <p>Les boutons devait s'éclairssire légerement au survol et l'ombre de s'épaissir</p>
-                <pre>
-                    <code className="html">
-                        {` <button>Explorer nos restaurants</button>`}
-                    </code>
-                </pre>
-                <p>Pour ce faire, l'attribut :after a été utilisé avec un contenu vide et une position absolue à 0 partout pour bien recouvrir l'élément. En modifiant l'opacité lors du :hover, l'ombre et le fond s'ajoutent légèrement.</p>
-                <pre>
-                    <code className="scss">
-                        {`$Button-gradient: linear-gradient(
+          </code>
+        </pre>
+        
+        <h4 className="flexrow" >Les bouttons<img className="imgFood" src="./Image/ohmyfood/ButtonGif.gif" alt="animation d'un boutton" /></h4>
+        <p>Les boutons devait s'éclairssire légerement au <b>survol</b> et l'ombre de s'épaissir</p>
+        <pre>
+          <code className="html">
+            {` <button>Explorer nos restaurants</button>`}
+          </code>
+        </pre>
+        <p>Pour ce faire, l'attribut <b>:after</b> a été utilisé avec un contenu vide
+          et une <b>position absolue</b> à 0 partout pour bien recouvrir l'élément.
+          En modifiant l'opacité lors du <b>:hover</b>, l'ombre et le fond s'ajoutent
+          légèrement.</p>
+        <pre>
+          <code className="scss">
+            {`$Button-gradient: linear-gradient(
   355deg,
   rgba(147, 86, 220, 1) 0%,
   rgba(255, 121, 218, 1) 100%
@@ -243,19 +287,22 @@ button {
   }
 }
 `}
-                    </code>
-                    </pre>
-                <h3>Le Mailto</h3>
-                <p>Une redirection vers l'adresse e-mail avait été demandée, pour la réaliser, 'mailto' a été utilisé. </p>
-                <pre>
-                    <code className="html">
-                        {` <a href="mailto:Contact@ohmyfood.com">Contact</a>`}
-                    </code>
-                </pre>
-                <b>Voilà les principales fonctionnalités implémentées sur le site. N'hésitez pas à parcourir le code sur GitHub ou à consulter la démo sur GitHub Pages.</b>
-            </div>
-        </section>
-    )
+          </code>
+        </pre>
+        <h3>Le Mailto</h3>
+        <p>Une redirection vers l'adresse <b>e-mail</b> avait été demandée,
+          pour la réaliser, <b>'mailto'</b> a été utilisé. </p>
+        <pre>
+          <code className="html">
+            {` <a href="mailto:Contact@ohmyfood.com">Contact</a>`}
+          </code>
+        </pre>
+        <b>Voilà les principales fonctionnalités implémentées sur ce projet.
+          N'hésitez pas à parcourir le code sur GitHub ou à consulter la démo
+          sur GitHub Pages.</b>
+      </div>
+    </section>
+  )
 }
 
 export default Ohmyfood;

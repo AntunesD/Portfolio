@@ -11,6 +11,7 @@ const ProjetData = [
     gitPages: "https://antunesd.github.io/Ohmyfood-Am-liorez-l-interface-d-un-site-mobile-avec-des-animations-CSS-/"
   },
   {
+    title: 'Kasa',
     imgTitle: './Image/kasa/LogoKasa.png',
     outil: 'React',
     gif: './Image/kasa/Kasa-webm.webm',
@@ -21,6 +22,7 @@ const ProjetData = [
     gitPages: "https://antunesd.github.io/Kasa_-_Creez_une_application_web_de_location_immobiliere_avec_React"
   },
   {
+    title: 'Nina Carducci',
     imgTitle: './Image/Nina/NinaTitre.png',
     outil: 'SEO',
     gif: './Image/Nina/Nina-Carducci-webm.webm',
@@ -31,6 +33,7 @@ const ProjetData = [
     gitPages: "https://antunesd.github.io/Nina_Carducci---Optimisez_le_referencement_d_un_site_de_photographe/"
   },
   {
+    title: '724 Events',
     imgTitle: './Image/77Events/77Events.png',
     outil: 'Debug',
     gif: './Image/77Events/77Events-webm.webm',
@@ -41,6 +44,7 @@ const ProjetData = [
     gitPages: "https://antunesd.github.io/724Events---Debuggez-le-site-d-une-agence-d-evenementiel"
   },
   {
+    title: 'Argent Bank',
     imgTitle: './Image/ArgentBank/argentBankLogo.png',
     outil: 'Redux',
     gif: './Image/ArgentBank/Argent-Bank-webm.webm',

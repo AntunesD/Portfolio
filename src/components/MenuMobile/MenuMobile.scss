@@ -1,3 +1,5 @@
+@import "../../utils/variables.scss";
+
 $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 $menuItems: 5;
 
@@ -11,8 +13,8 @@ $menuItems: 5;
   width: 100%;
   background: linear-gradient(
     0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 50%,
+    $SecondColor 0%,
+    $SecondColor 50%,
     rgba(134, 112, 96, 0.6) 100%
   );
   transition: all 0.5s ease-out;
@@ -66,7 +68,7 @@ $menuItems: 5;
     li.menu-item {
       border-bottom: 1px solid #333;
       margin-top: 5px;
-      transform: scale(1.15) translateY(-30px);
+      transform: scale(1.15) translateY(-300px);
       opacity: 0;
       transition: transform 0.5s $cubic, opacity 0.6s $cubic;
 
@@ -93,7 +95,7 @@ $menuItems: 5;
   /* Styles du menu ouvert*/
   &.menu-opened {
     height: 100%;
-    background-color: white;
+    background-color: $SecondColor;
     transition: all 0.3s ease-in;
     transition-delay: 0.25s;
 

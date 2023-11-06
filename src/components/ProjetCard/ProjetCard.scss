@@ -9,6 +9,7 @@
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
   padding: $CardPadding;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   &:hover {
     transform: scale(1.03);
   }
@@ -147,8 +148,26 @@
   }
 }
 
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @media (max-width: 350px) {
   .bordercard {
     width: 250px;
+  }
+  .card-details {
+    height: 150px;
+  }
+  .enSavoir {
+    & i {
+
+      animation: rotateAnimation 2s linear infinite;;
+    }
   }
 }

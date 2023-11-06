@@ -4,6 +4,9 @@ import outilArray from "../../data/OutilsArray";
 /**Importation des pages de détails***/
 import Ohmyfood from '../../pages/Ohmyfood';
 import Kasa from '../../pages/Kasa';
+import NinaCarducci from "../../pages/NinaCarducci";
+import SSEvents from "../../pages/SSEvents";
+import ArgentBank from "../../pages/ArgenBank";
 import Travaux from "../../pages/Travaux";
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -22,7 +25,16 @@ function PortfolioDetails() {
     case 'Kasa':
       dynamicComponent = <Kasa />;
       break;
-    // Ajoutez d'autres cas pour d'autres composants si nécessaire
+    case 'Nina Carducci':
+      dynamicComponent = <NinaCarducci />;
+      break;
+    case '724 Events':
+      dynamicComponent = <SSEvents />;
+      break;
+    case 'Argent Bank':
+      dynamicComponent = <ArgentBank />;
+      break;
+
     default:
       dynamicComponent = <Travaux />;
   }
@@ -49,7 +61,7 @@ function PortfolioDetails() {
             <h2 className="header">
               <img src={logo} alt='outil utilisé' />
               <img src={modal.imgTitle} alt='Titre du projet' />
-              <button onClick={closeModalHandler}>{window.innerWidth < 768 ? <i class="fa-solid fa-xmark"></i> : 'Fermer la modal'} </button>
+              <button onClick={closeModalHandler}>{window.innerWidth < 768 ? <i class="fa-solid fa-xmark"></i> : 'Fermer'} </button>
             </h2>
             <div className="contenue">
               {dynamicComponent}

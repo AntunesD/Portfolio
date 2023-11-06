@@ -15,6 +15,38 @@
   }
 }
 
+.competence-item {
+  position: relative;
+}
+
+.bulle-comics-sur-bulle {
+  position: absolute;
+  bottom: 80%;
+  left: 85%;
+  z-index: 2;
+  width: 260px;
+  & .comic-bubble {
+    padding: 5px 10px ;
+    transform: scale(0);
+    animation: expand-bounce 0.4s forwards;
+    & p {
+      margin: 5px 0;
+    }
+  }
+  }
+  
+  @keyframes expand-bounce {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
 @media (max-width: 768px) {
   .competences {
     width: 100%;
@@ -23,6 +55,9 @@
   .bulle-comics-sur-bulle {
     left: 0;
     width: 100%;
+    & .comic-bubble {
+      max-width: 80%;
+    }
     & .comic-bubble::before{
       left: 50%;
     }

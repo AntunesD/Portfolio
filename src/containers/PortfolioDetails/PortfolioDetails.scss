@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
   z-index: 11;
-  padding: 30px;
+  padding: 10px;
 
   & button {
     color: white;
@@ -68,7 +68,7 @@
   & .contenue {
     margin: 10px 0;
     flex: 1;
-    background-color: white;
+    background-color: $SecondColor;
     border-radius: 10px;
     padding: 10px;
     overflow: auto;
@@ -89,7 +89,7 @@
 
 @media (max-width: 768px) {
 .modal {
-  padding: 7px 0;
+  padding: 7px;
   & .bord {
     padding: 7px;
   }
@@ -100,12 +100,18 @@
   }
   & .contenue {
     text-align: justify;
+    & h2 {
+      text-align:left;
+    }
   }
   button {
     border-radius: 100%;
     width: 30px;
     height: 30px;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 }

@@ -7,21 +7,44 @@ body {
   //   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 96%, rgba($PrimaryColor,0.60) 100%);
+  background: linear-gradient(
+    0deg,
+    $SecondColor 0%,
+    $SecondColor 96%,
+    rgba($PrimaryColor, 0.6) 100%
+  );
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-
 h2 {
-  
-  font-size: 30px;
+  font-size: 34px;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playball', cursive;
+h1,
+h2,
+h3{
+  font-family: "Playball", cursive;
+}
+
+#Competences,
+#Accueil,
+#Portfolio {
+  & h2 {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 15px;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0 8px;
+  }
 }

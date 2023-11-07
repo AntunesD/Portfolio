@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Créez et publiez votre portfolio de développeur
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenue sur mon portfolio de développeur, un espace où je partage mes réalisations, mes compétences et mon parcours en tant que développeur. 
 
-## Available Scripts
+Vous pouvez accéder à mon portfolio en ligne [ici](https://AntunesD.github.io/Portfolio).
 
-In the project directory, you can run:
+![Aperçu du Portfolio](ScreenAccueil.png)
 
-### `npm start`
+## Présentation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ce portfolio a été créé dans le cadre de mon projet en tant qu'étudiant chez OpenClassRoom. Il représente un échantillon de mon travail, mettant en avant mes compétences et mes projets en développement web et en programmation. Mon portfolio est conçu pour refléter mon expérience et mon expertise en développement, tout en permettant aux visiteurs de découvrir mes réalisations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Contenu du Portfolio
 
-### `npm test`
+Mon portfolio comprend plusieurs sections, notamment :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Accueil** : Une brève introduction me concernant.
+- **Compétences** : Une liste de mes compétences techniques.
+- **Portfolio** : Une galerie de mes réalisations avec des descriptions détaillées.
+- **Contact** : Un formulaire pour me contacter directement.
 
-### `npm run build`
+## Captures d'écran
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Capture d'écran 1](ScreenCompetences.png)
+![Capture d'écran 2](SceenPortfolio.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Utilisées
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Mon portfolio a été développé en utilisant les technologies suivantes :
 
-### `npm run eject`
+- HTML
+- CSS
+- Sass
+- JavaScript
+- React
+- Redux
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Comment le Déployer Localement
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Si vous souhaitez exécuter mon portfolio React localement, suivez ces étapes :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clonez ce répertoire GitHub sur votre ordinateur :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/AntunesD/Portfolio.git
+```
 
-## Learn More
+2. Assurez-vous d'avoir Node.js installé sur votre système. Si ce n'est pas le cas, téléchargez-le depuis [le site officiel de Node.js](https://nodejs.org/).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Installez les dépendances du projet en exécutant la commande suivante dans le répertoire du projet :
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+4. Démarrez le serveur de développement en utilisant la commande :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+5. Une fois que le serveur est lancé, ouvrez votre navigateur web et accédez à l'adresse `http://localhost:3000` pour voir mon portfolio en action.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Assurez-vous que le serveur de développement est en cours d'exécution tant que vous explorez le portfolio en mode local. Vous pouvez également personnaliser davantage le contenu en modifiant les fichiers du projet.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contact
 
-### Advanced Configuration
+N'hésitez pas à me contacter à l'adresse [antunesd90@gmail.com] pour toute question ou proposition de collaboration.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Merci d'avoir visité mon portfolio !

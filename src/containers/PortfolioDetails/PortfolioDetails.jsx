@@ -58,7 +58,7 @@ function PortfolioDetails() {
       <div className="modal">
         <div className='bord'>
           <div className={`projet ${Background}`}>
-            <h2 className="header">
+            <h2 className="Portfolio_header">
               <img src={logo} alt='outil utilisé' />
               <img src={modal.imgTitle} alt='Titre du projet' />
               <button onClick={closeModalHandler}>{window.innerWidth < 768 ? <i class="fa-solid fa-xmark"></i> : 'Fermer'} </button>

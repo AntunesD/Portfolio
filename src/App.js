@@ -9,7 +9,7 @@ import Competence from "./containers/Competences/Competences";
 
 function App() {
   return (
-    <div>
+    <main>
       <Header />
       <Accueil />
       <ContainerTete />
@@ -18,7 +18,7 @@ function App() {
       <PortfolioDetails />
       <Formulaire />
       <Footer />
-    </div>
+    </main>
   );
 }
 

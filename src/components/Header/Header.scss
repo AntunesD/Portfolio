@@ -3,31 +3,53 @@
 header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
 
-  & h1 {
-    font-family: "Yellowtail", cursive;
-    margin-left: 10px;
-    color: $PrimaryColor;
-  }
-
-  & ul {
+  .header {
+    width: 100%;
+    max-width: 1240px;
     display: flex;
-    flex-direction: row;
-    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
 
-    & li {
-      margin: 0 10px;
+    & h1 {
+      font-family: "Yellowtail", cursive;
+      margin-left: 50px;
+      color: $PrimaryColor;
+    }
+    & nav {
+      margin-right: 50px;
+    }
+    & ul {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+
+      & li {
+        margin: 0 10px;
+      }
+    }
+
+    & a {
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
+}
 
-  & a {
-    text-decoration: none;
-    color: black;
-
-    &:hover {
-      text-decoration: underline;
+@media (max-width: 768px) {
+  header {
+    & .header {
+      & h1 {
+        margin-left: 10px;
+      }
+      & nav {
+        margin-right: auto;
+      }
     }
   }
 }

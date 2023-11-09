@@ -43,11 +43,11 @@ function NinaCarducci() {
         <h3>Les audits Lighthouse</h3>
         <p className="center">Avant :</p>
         <div className="imgNina">
-          <img src="./Image/Nina/Lighthouse1.png" alt="Premier audit" />
+          <img src="./Image/Nina/Lighthouse1.webp" alt="Premier audit" />
         </div>
         <p className="center" >Après :</p>
         <div className="imgNina">
-          <img src="./Image/Nina/Lighthouse2.png" alt="Dernier audit" />
+          <img src="./Image/Nina/Lighthouse2.webp" alt="Dernier audit" />
         </div>
         <p><b>Google Lighthouse</b> est un outil d'audit de performances et de qualité pour les sites web.
           Il permet d'évaluer la <b>performance</b>, l'<b>accessibilité</b>, les <b>bonnes pratiques</b> en matière de développement web,
@@ -88,8 +88,8 @@ function NinaCarducci() {
 
         <h3>Les contrasts</h3>
         <div className="imgNina_contrast">
-          <img src="./Image/Nina/contrast1.png" alt="mauvais contrast" />
-          <img src="./Image/Nina/contrast2.png" alt="bon contrast" />
+          <img src="./Image/Nina/contrast1.webp" alt="mauvais contrast" />
+          <img src="./Image/Nina/contrast2.webp" alt="bon contrast" />
         </div>
         <p> Le <b>contrast</b> des filtres a était modifié. Un bon contraste garantit que le texte se distingue clairement de l'arrière-plan,
           ce qui améliore l'expérience de lecture, facilite la compréhension du contenu
@@ -97,7 +97,7 @@ function NinaCarducci() {
 
         <h3>Les scripts en Defer ou async</h3>
         <div className="imgNina">
-          <img src="./Image/Nina/DeferAsync.jpg" alt="schema defer et async" />
+          <img src="./Image/Nina/DeferAsync.webp" alt="schema defer et async" />
         </div>
         <p>Les attributs "<b>defer</b>" et "<b>async</b>" ont était utilisés dans les balises de <b>script</b> HTML
           pour contrôler le moment où un script est téléchargé et exécuté sur une page web.
@@ -180,7 +180,7 @@ function NinaCarducci() {
         <h3>Le rapport</h3>
         <p>Et enfin, un rapport d'optimisation a également été livré, retraçant les modifications qui ont été faites.</p>
         <div className="imgNina">
-          <img className="imgNina_rapport" src="./Image/Nina/Rapport.png" alt="Rapport d'optimisation"/>
+          <img className="imgNina_rapport" src="./Image/Nina/Rapport.webp" alt="Rapport d'optimisation"/>
         </div>
         <b>Voilà les principales fonctionnalités implémentées sur ce projet. N'hésitez pas à parcourir le code sur GitHub
           ou à consulter la démo sur GitHub Pages.</b>

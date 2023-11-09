@@ -98,8 +98,8 @@ export const getMonth = (date) => MONTHS[date.getMonth()];`}
           paramètre, ou ce <b>ternaire</b> qui proposait deux réponses égales.</p>
         <div className="imgSS">
 
-          <img src="./Image/77Events/valueManquante1.png" alt="fonction sans value" />
-          <img src="./Image/77Events/valueManquante.png" alt="ternaire deux meme solution" />
+          <img src="./Image/77Events/valueManquante1.webp" alt="fonction sans value" />
+          <img src="./Image/77Events/valueManquante.webp" alt="ternaire deux meme solution" />
         </div>
 
         <h3>Les tests</h3>
@@ -139,7 +139,7 @@ export const getMonth = (date) => MONTHS[date.getMonth()];`}
         <p>Après avoir lancé le test avec une commande de test, on reçoit
           un rapport qui indique si les tests sont passés ou non.</p>
         <div className="imgSS" >
-          <img src="./Image/77Events/Test.png" alt="Résultat des tests" />
+          <img src="./Image/77Events/Test.webp" alt="Résultat des tests" />
         </div>
         <p>
           <b>Voilà les principales fonctionnalités implémentées sur ce projet. N'hésitez pas

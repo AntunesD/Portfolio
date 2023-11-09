@@ -48,7 +48,7 @@ function Ohmyfood() {
         <p>Ce projet nécessite plusieurs animations, notamment le chargement,
           les likes, l'arrivée des plats dans le menu et la sélection des plats. </p>
         <h4 className="flexrow">Le Loader
-          <img className="imgFood" src="./Image/ohmyfood/LoaderGif.gif" alt="animation du loader" />
+          <img className="imgFood" src="./Image/ohmyfood/LoaderGifW.webp" alt="animation du loader" />
         </h4>
         <p>Le Loader a était fait avec des <b>&lt;span&gt;</b> </p>
         <pre>
@@ -120,7 +120,7 @@ function Ohmyfood() {
           </code>
         </pre>
         <h4 className="flexrow">Les likes
-          <img className="imgFood" src="./Image/ohmyfood/LikeGif.gif" alt="animation like" />
+          <img className="imgFood" src="./Image/ohmyfood/LikeGifW.webp" alt="animation like" />
 
         </h4>
         <p >Les likes ont était fait avec une <b>checkbox</b> qui change de <b>label</b></p>
@@ -163,7 +163,7 @@ function Ohmyfood() {
           </code>
         </pre>
         
-        <h4 className="flexrow mobile--flexColumn"> L'arrivée des plats <img className="imgFood" src="./Image/ohmyfood/PlatGif.gif" alt="animation d'arrivé des plat" /> </h4>
+        <h4 className="flexrow mobile--flexColumn"> L'arrivée des plats <img className="imgFood" src="./Image/ohmyfood/PlatGifW.webp" alt="animation d'arrivé des plat" /> </h4>
         <p>L'arrivée des plats a été réalisée à l'aide d'une liste <b>&lt;ul&gt;</b> .</p>
         <pre>
           <code className="html">
@@ -208,7 +208,7 @@ function Ohmyfood() {
           </code>
         </pre>
         
-        <h4 className="flexrow mobile--flexColumn" >Les coches<img className="imgFood" src="./Image/ohmyfood/CocheGig.gif" alt="animation selection des plats" /></h4>
+        <h4 className="flexrow mobile--flexColumn" >Les coches<img className="imgFood" src="./Image/ohmyfood/CocheGifW.webp" alt="animation selection des plats" /></h4>
         <p>Pour les coches, il était demandé de les faire apparaître au <b>survol</b> du curseur.</p>
         <pre>
           <code className="html">
@@ -242,7 +242,7 @@ function Ohmyfood() {
           </code>
         </pre>
         
-        <h4 className="flexrow" >Les bouttons<img className="imgFood" src="./Image/ohmyfood/ButtonGif.gif" alt="animation d'un boutton" /></h4>
+        <h4 className="flexrow" >Les bouttons<img className="imgFood" src="./Image/ohmyfood/ButtonGifW.webp" alt="animation d'un boutton" /></h4>
         <p>Les boutons devait s'éclairssire légerement au <b>survol</b> et l'ombre de s'épaissir</p>
         <pre>
           <code className="html">

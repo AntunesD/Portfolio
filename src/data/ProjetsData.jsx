@@ -1,7 +1,7 @@
 const ProjetData = [
   {
     title: 'Ohmyfood',
-    imgTitle: './Image/ohmyfood/ohmyfoodTitle.png',
+    imgTitle: './Image/ohmyfood/ohmyfoodTitle.webp',
     outil: 'Sass',
     gif: './Image/ohmyfood/Ohmyfood-webm.webm',
     description:
@@ -12,7 +12,7 @@ const ProjetData = [
   },
   {
     title: 'Kasa',
-    imgTitle: './Image/kasa/LogoKasa.png',
+    imgTitle: './Image/kasa/LogoKasa.webp',
     outil: 'React',
     gif: './Image/kasa/Kasa-webm.webm',
     description:
@@ -23,7 +23,7 @@ const ProjetData = [
   },
   {
     title: 'Nina Carducci',
-    imgTitle: './Image/Nina/NinaTitre.png',
+    imgTitle: './Image/Nina/NinaTitre.webp',
     outil: 'SEO',
     gif: './Image/Nina/Nina-Carducci-webm.webm',
     description:
@@ -34,7 +34,7 @@ const ProjetData = [
   },
   {
     title: '724 Events',
-    imgTitle: './Image/77Events/77Events.png',
+    imgTitle: './Image/77Events/77Events.webp',
     outil: 'Debug',
     gif: './Image/77Events/77Events-webm.webm',
     description:
@@ -45,7 +45,7 @@ const ProjetData = [
   },
   {
     title: 'Argent Bank',
-    imgTitle: './Image/ArgentBank/argentBankLogo.png',
+    imgTitle: './Image/ArgentBank/argentBankLogo.webp',
     outil: 'Redux',
     gif: './Image/ArgentBank/Argent-Bank-webm.webm',
     description:

@@ -69,7 +69,7 @@ function PortfolioDetails() {
             <div className="liens">
               {window.innerWidth < 768 ? (
                 <a href={modal.gitHub} target="_blank" rel="noreferrer">
-                  <img src="./Logo/github-mark.png" alt="GitHub" />
+                  <img src="./Logo/github-mark.webp" alt="GitHub" />
                 </a>
               ) : (
                 <a href={modal.gitHub} target="_blank" rel="noreferrer">

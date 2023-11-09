@@ -36,21 +36,21 @@ const outilArray = [
   },
   {
     nom: "Sass",
-    logo: "./Logo/sassLogo.png",
+    logo: "./Logo/sassLogo.webp",
     background: "backgroundSass",
     definition:
       "Sass est un préprocesseur CSS qui ajoute des fonctionnalités avancées au langage CSS, comme les variables et les mixins.",
   },
   {
     nom: "SEO",
-    logo: "./Logo/seoLogo.png",
+    logo: "./Logo/seoLogo.webp",
     background: "backgroundSEO",
     definition:
       "SEO (Search Engine Optimization) fait référence aux pratiques visant à améliorer la visibilité d'un site web dans les moteurs de recherche comme Google.",
   },
   {
     nom: "Debug",
-    logo: "./Logo/logoDebug.png",
+    logo: "./Logo/logoDebug.webp",
     background: "backgroundDebug",
     definition:
       "Le débogage est le processus de recherche et de correction des erreurs dans le code informatique pour assurer le bon fonctionnement d'une application.",

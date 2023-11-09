@@ -84,8 +84,8 @@ export default App;
                     que l'on pourra appeler chaque fois que l'on en aura besoin.</p>
 
                 <h4>Les bannières</h4>
-                <div className="imgKasa" ><img src="./Image/kasa/Bannier1.png" alt="Banniere accueil" />
-                    <img src="./Image/kasa/Bannier2.png" alt="Banniere A propos" /></div>
+                <div className="imgKasa" ><img src="./Image/kasa/Bannier1.webp" alt="Banniere accueil" />
+                    <img src="./Image/kasa/Bannier2.webp" alt="Banniere A propos" /></div>
                 <p>Sur la page d'accueil et la page À propos, il y avait la 
                   même <b>bannière</b>, seulement avec une image et un titre différents.
                     Ainsi, un composant a été créé dans lequel il suffisait
@@ -110,7 +110,7 @@ export default Banner;`}
                 </pre>
                 <h4>Les cartes</h4>
                 <div className="imgKasa" >
-                    <img src="./Image/kasa/cartes.png" alt="cartes de logements" />
+                    <img src="./Image/kasa/cartes.webp" alt="cartes de logements" />
                 </div>
                 <p>Sur la page d'accueil, un certain nombre de cartes devait être
                     affiché en fonction des objets du fichier <b>JSON</b>. La fonction
@@ -141,7 +141,7 @@ export default Cards;
                 </pre>
                 <h4>Les collapses</h4>
                 <div className="imgKasa" >
-                    <img src="./Image/kasa/collapse.png" alt="collapse" />
+                    <img src="./Image/kasa/collapse.webp" alt="collapse" />
                 </div>
                 <p>Pour gérer l'ouverture et la fermeture des éléments de type 'collapse',
                     le <b>hook useState</b> a été utilisé pour créer un état et modifier 
@@ -176,7 +176,7 @@ export default Collapse;`}
                 </pre>
                 <h4>Le carousel</h4>
                 <div className="imgKasa" >
-                    <img src="./Image/kasa/carousel.png" alt="carousel" />
+                    <img src="./Image/kasa/carousel.webp" alt="carousel" />
                 </div>
                 <p>Pour terminer cet article, voici un élément légèrement plus
                     complexe. S'il y a plus d'une image, nous affichons une barre

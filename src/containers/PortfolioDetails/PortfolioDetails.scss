@@ -39,12 +39,29 @@
     margin: 0;
     height: 20px;
 
-    & img {
+    .bulle {
+      width: 30px;
+      height: 30px;
       margin: 0;
-      object-fit: cover;
-      max-width: 100%;
-      max-height: 100%;
     }
+    & span {
+      height: 100%;
+      background-color: white;
+      border-radius: 5px;
+      padding: 5px;
+      display: flex;
+      & img {
+        margin: 0;
+        object-fit: cover;
+        max-height: 100%;
+      }
+    }
+  }
+
+  .liens img {
+    margin: 0;
+    object-fit: cover;
+    max-height: 100%;
   }
 
   & .bord {
@@ -74,8 +91,8 @@
     overflow: auto;
   }
 
-  & .liens p, .liens a {
- 
+  & .liens p,
+  .liens a {
     margin: 0;
     font-size: 24px;
     font-weight: bold;
@@ -83,35 +100,35 @@
   }
 }
 
-.gitpage{
+.gitpage {
   width: 100px;
 }
 
 @media (max-width: 768px) {
-.modal {
-  padding: 7px;
-  & .bord {
+  .modal {
     padding: 7px;
-  }
-  & .projet {
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-    padding: 5px;
-  }
-  & .contenue {
-    text-align: justify;
-    & h2 {
-      text-align:left;
+    & .bord {
+      padding: 7px;
+    }
+    & .projet {
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      padding: 5px;
+    }
+    & .contenue {
+      text-align: justify;
+      & h2 {
+        text-align: left;
+      }
+    }
+    button {
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
-  button {
-    border-radius: 100%;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 }

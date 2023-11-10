@@ -15,10 +15,10 @@
   position: absolute;
   top: -26px;
   transform: rotate(-20deg);
+  z-index: 2;
 }
 
-.tete::before {
-  content: ".";
+.cheveux-arriere {
   color: transparent;
   height: 50px;
   width: 90px;
@@ -27,16 +27,16 @@
   border-top-left-radius: 30%;
   position: absolute;
   top: -2px;
-  z-index: -1;
 }
 
 
-.tete {
+.tete, .peau {
   width: 90px;
   height: 100px;
   background-color: $Peau; 
   border-radius: 50%; 
   position: relative;
+  z-index: 1;
 }
 
 /*oreille*/
@@ -47,6 +47,7 @@
   width: 10px;
   height: 25px;
   border-radius: 50px;
+  z-index: 2;
 }
 
 .oreille-gauche {
@@ -70,6 +71,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .oeil::after{
@@ -122,6 +124,7 @@
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
   left: 40px;
+  z-index: 2;
 }
 
 /* Style de la bouche */
@@ -133,6 +136,7 @@
   position: absolute;
   bottom: 20px;
   right: 25px;
+  z-index: 2;
 }
 
 .bouche::before {

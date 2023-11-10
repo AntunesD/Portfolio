@@ -1,0 +1,159 @@
+@import "./variables.scss";
+
+$DarkPrimary: #333;
+$DarkSecond: #888;
+
+/* theme light  */
+
+.body_light-theme {
+  background: linear-gradient(
+    0deg,
+    $SecondColor 0%,
+    $SecondColor 96%,
+    rgba($PrimaryColor, 0.6) 100%
+  );
+  z-index: -2;
+
+  & h1 {
+    color: $PrimaryColor;
+  }
+
+  & h2 {
+    background-color: white;
+  }
+
+  & .headerMenuMobile {
+    background: linear-gradient(
+      0deg,
+      $SecondColor 0%,
+      $SecondColor 50%,
+      rgba(134, 112, 96, 0.6) 100%
+    );
+    &.menu-opened {
+      background-color: $SecondColor;
+    }
+  }
+
+  & #carousel {
+    background: radial-gradient(
+      ellipse at center,
+      $PrimaryColor 25%,
+      rgba($PrimaryColor, 0.4) 50%,
+      $SecondColor 72%,
+      $SecondColor 100%
+    );
+  }
+
+  & #Contact {
+    background: linear-gradient(
+      0deg,
+      $PrimaryColor 0%,
+      rgba($PrimaryColor, 0.55) 15%,
+      $SecondColor 30%
+    );
+  }
+  & footer {
+    h2 {
+      background: none;
+      color: #fff;
+    }
+  }
+}
+
+/* theme dark */
+
+.body_dark-theme {
+  background: linear-gradient(
+    0deg,
+    $DarkPrimary 0%,
+    $DarkPrimary 96%,
+    $PrimaryColor 100%
+  );
+  color: #fff;
+
+  & h1 {
+    color: black;
+  }
+
+  & h2 {
+    background-color: $PrimaryColor;
+    color: black;
+  }
+
+  & h3 {
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 2px;
+  }
+
+  & .headerMenuMobile {
+    background: linear-gradient(
+      0deg,
+      $DarkSecond 0%,
+      $DarkSecond 50%,
+      $PrimaryColor 100%
+    );
+    &.menu-opened {
+      background-color: $SecondColor;
+    }
+  }
+
+  & #carousel {
+    background: radial-gradient(
+      ellipse at center,
+      $PrimaryColor 25%,
+      rgba($PrimaryColor, 0.4) 50%,
+      $DarkPrimary 72%,
+      $DarkPrimary 100%
+    );
+  }
+
+  & .card-header,
+  .card-details,
+  .card-image p {
+    background-color: $DarkSecond;
+    color: black;
+  }
+
+  & .fincard {
+    color: black;
+  }
+
+  & #Contact {
+    background: linear-gradient(
+      0deg,
+      $PrimaryColor 0%,
+      rgba($PrimaryColor, 0.55) 15%,
+      $DarkPrimary 30%
+    );
+  }
+  & footer {
+    h2 {
+      background: none;
+      color: #fff;
+    }
+  }
+
+  /*** modal ***/
+
+  .modal {
+    h2,
+    .liens {
+      background-color: $DarkSecond;
+    }
+
+    & .contenue {
+      background-color: $DarkPrimary;
+      & h2,
+      h3 {
+        background-color: $PrimaryColor;
+        color: black;
+      }
+    }
+  }
+}
+
+.white-to-primary_dark-theme {
+  background-color: $PrimaryColor;
+  color: black;
+}

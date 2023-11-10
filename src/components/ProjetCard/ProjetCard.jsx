@@ -5,6 +5,8 @@ import { openModal } from '../../redux/reducer/modalSlice';
 
 import outilArray from '../../data/OutilsArray';
 
+import Bulle from '../Bulle/Bulle';
+
 function ProjetCard({ title, place, imgTitle, outil, gif, description, cara, gitHub, gitPage, Click }) {
 
 
@@ -28,7 +30,7 @@ function ProjetCard({ title, place, imgTitle, outil, gif, description, cara, git
             <h3>
               <img src={imgTitle} alt='Titre du projet' />
             </h3>
-            <img src={logo} alt='outil utilisé' />
+            <Bulle logo={logo}/>
           </div>
           <div className="card-image">
             <video autoPlay loop muted>

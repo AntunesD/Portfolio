@@ -9,12 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "PT Sans", sans-serif;
 
-  background: linear-gradient(
-    0deg,
-    $SecondColor 0%,
-    $SecondColor 96%,
-    rgba($PrimaryColor, 0.6) 100%
-  );
+
 }
 
 code {
@@ -35,7 +30,6 @@ h3{
 #Accueil,
 #Portfolio {
   & h2 {
-    background-color: white;
     border-radius: 10px;
     padding: 5px 15px;
 
@@ -44,7 +38,10 @@ h3{
 }
 
 @media (max-width: 768px) {
-  body {
-    margin: 0 8px;
+  main {
+    margin: 0;
+    padding: 0 8px;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }

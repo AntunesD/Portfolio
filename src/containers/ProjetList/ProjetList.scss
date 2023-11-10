@@ -11,13 +11,7 @@
 }
 
 #carousel {
-  background: radial-gradient(
-    ellipse at center,
-    $PrimaryColor 25%,
-    rgba($PrimaryColor, 0.4) 50%,
-    $SecondColor 72%,
-    $SecondColor 100%
-  );
+
 
   & .carousel_back {
     position: absolute;

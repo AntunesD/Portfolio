@@ -4,6 +4,8 @@ function Tete() {
     return (
         <div className="tete">
             <div className='cheveux' ></div>
+            <div className='cheveux-arriere' ></div>
+            <div className='peau' ></div>
             <div className="oreille oreille-gauche"></div>
             <div className="oreille oreille-droite"></div>
             <div className="oeil oeil-gauche">

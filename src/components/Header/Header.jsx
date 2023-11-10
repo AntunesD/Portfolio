@@ -1,7 +1,16 @@
 import "./Header.scss";
 import MenuMobile from "../MenuMobile/MenuMobile";
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTheme } from '../../redux/reducer/themeSlice';
 
 function Header() {
+
+  const dispatch = useDispatch();
+  const theme = useSelector(state => state.theme.mode);
+
+  const handleThemeToggle = () => {
+    dispatch(toggleTheme());
+  };
 
   return (
     <header>
@@ -18,6 +27,13 @@ function Header() {
               <li><a href="#Contact" >Contact</a></li>
             </ul>
           </nav>
+        )}
+      </div>
+      <div className="theme-toggle" onClick={handleThemeToggle}>
+        {theme === 'dark' ? (
+          <i className="fa-regular fa-sun"></i>
+        ) : (
+          <i className="fa-regular fa-moon"></i>
         )}
       </div>
     </header>

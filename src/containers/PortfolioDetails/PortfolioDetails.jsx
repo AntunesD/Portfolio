@@ -1,6 +1,8 @@
 import "./PortfolioDetails.scss"
 import outilArray from "../../data/OutilsArray";
 
+import Bulle from "../../components/Bulle/Bulle";
+
 /**Importation des pages de détails***/
 import Ohmyfood from '../../pages/Ohmyfood';
 import Kasa from '../../pages/Kasa';
@@ -59,9 +61,9 @@ function PortfolioDetails() {
         <div className='bord'>
           <div className={`projet ${Background}`}>
             <h2 className="Portfolio_header">
-              <img src={logo} alt='outil utilisé' />
-              <img src={modal.imgTitle} alt='Titre du projet' />
-              <button onClick={closeModalHandler}>{window.innerWidth < 768 ? <i class="fa-solid fa-xmark"></i> : 'Fermer'} </button>
+              <Bulle logo={logo} />
+              <span><img src={modal.imgTitle} alt='Titre du projet' /></span>
+              <button onClick={closeModalHandler}>{window.innerWidth < 768 ? <i className="fa-solid fa-xmark"></i> : 'Fermer'} </button>
             </h2>
             <div className="contenue">
               {dynamicComponent}

@@ -4,12 +4,6 @@
   display: flex;
   justify-content: center;
   margin-top: 50px;
-  background: linear-gradient(
-    0deg,
-    $PrimaryColor 0%,
-    rgba($PrimaryColor, 0.55) 15%,
-    $SecondColor 30%
-  );
 }
 
 iframe {

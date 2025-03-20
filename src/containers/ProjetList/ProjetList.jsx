@@ -2,12 +2,15 @@ import './ProjetList.scss';
 import React, { useState, useRef } from 'react';
 import ProjetData from '../../data/ProjetsData';
 import ProjetCard from '../../components/ProjetCard/ProjetCard';
+import { openModal } from '../../redux/reducer/modalSlice';
+import { useDispatch } from 'react-redux';
 
 const ProjetList = () => {
     const [selectedIndex, setSelectedIndex] = useState(3); // Index de l'élément "selected"
     const touchStartX = useRef(null);
     const touchDeltaX = useRef(0);
     const carouselRef = useRef(null);
+    const dispatch = useDispatch();
 
     const moveToSelected = (index) => {
         setSelectedIndex(index);
@@ -28,22 +31,26 @@ const ProjetList = () => {
         }
         moveToSelected(newIndex);
     };
-    
 
-    const handleCardClick = (index) => {
+
+    const handleCardClick = (index, project) => {
         if (index !== selectedIndex) {
-          moveToSelected(index)
+            moveToSelected(index)
+        }
+        if (index === selectedIndex) {
+
+            dispatch(openModal({ project }));
         }
     };
-    
+
     /**pour le swipe */
     const handleTouchStart = (e) => {
         touchStartX.current = e.touches[0].clientX;
-         // Ajouter la classe pour désactiver la transition dans chaque carte
-         const cards = carouselRef.current.querySelectorAll('.slider');
-         cards.forEach((card) => {
-             card.classList.add('no-slider-transition');
-         });
+        // Ajouter la classe pour désactiver la transition dans chaque carte
+        const cards = carouselRef.current.querySelectorAll('.slider');
+        cards.forEach((card) => {
+            card.classList.add('no-slider-transition');
+        });
     };
 
     const handleTouchMove = (e) => {
@@ -76,13 +83,13 @@ const ProjetList = () => {
     return (
         <section id='Portfolio' >
             <div className='Portfolio_titre'>
-            <h2>Portfolio</h2>
+                <h2>Portfolio</h2>
             </div>
             <div id="prev" onClick={handlePrevClick} className='buttons-left'>
                 <div className='fleche-gauche-haut' ></div>
                 <div className='fleche-gauche-bas'></div>
             </div>
-            <div id="carousel" ref={carouselRef} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}  onTouchEnd={handleTouchEnd}>
+            <div id="carousel" ref={carouselRef} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}>
                 {ProjetData.map((projet, index) => (
                     <ProjetCard
                         key={index}
@@ -99,22 +106,15 @@ const ProjetList = () => {
                                                 ? 'prevLeftSecond'
                                                 : 'hideRight'
                         }
-                        title={projet.title}
-                        imgTitle={projet.imgTitle}
-                        gif={projet.gif}
-                        description={projet.description}
-                        outil={projet.outil}
-                        cara={projet.caracteristique}
-                        gitHub={projet.gitHub}
-                        gitPage={projet.gitPages}
-                        Click={() => handleCardClick(index)}
+                        project={projet}
+                        Click={() => handleCardClick(index, projet)}
                     >
 
                     </ProjetCard>
                 ))}
             </div>
-           
-            <div id="next"  onClick={handleNextClick} className='buttons-right'>
+
+            <div id="next" onClick={handleNextClick} className='buttons-right'>
                 <div className='fleche-droite-haut' ></div>
                 <div className='fleche-droite-bas'></div>
             </div>

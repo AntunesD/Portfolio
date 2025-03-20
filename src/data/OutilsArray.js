@@ -1,24 +1,24 @@
 const outilArray = [
   {
-    nom: "HTML",
-    logo: "./Logo/HTML5_Badge.svg",
+    nom: "TypeScript",
+    logo: "./Logo/typescript.svg",
     background: "",
     definition:
-      "HTML (HyperText Markup Language) est un langage de balisage utilisé pour créer la structure des pages web.",
+      "TypeScript est un surensemble de JavaScript qui ajoute un typage statique et des fonctionnalités avancées pour améliorer la maintenabilité du code.",
   },
   {
-    nom: "CSS",
-    logo: "./Logo/CSS3_logo.svg",
+    nom: "Tailwind CSS",
+    logo: "./Logo/tailwindcss.svg",
     background: "",
     definition:
-      "CSS (Cascading Style Sheets) est un langage de style utilisé pour contrôler la présentation des éléments HTML sur une page web.",
+      "Tailwind CSS est un framework de style basé sur des classes utilitaires permettant de concevoir des interfaces modernes et réactives rapidement.",
   },
   {
-    nom: "Javascript",
-    logo: "./Logo/javascript.svg",
+    nom: "TanStack",
+    logo: "./Logo/tanstack.svg",
     background: "",
     definition:
-      "JavaScript est un langage de programmation utilisé pour rendre les pages web interactives et dynamiques.",
+      "TanStack est un ensemble de bibliothèques open-source, notamment React Query et React Table, facilitant la gestion de l'état et des données dans les applications modernes.",
   },
   {
     nom: "React",
@@ -33,6 +33,27 @@ const outilArray = [
     background: "backgroundRedux",
     definition:
       "Redux est un gestionnaire d'état pour les applications JavaScript, souvent utilisé avec React pour gérer l'état de l'application de manière prévisible.",
+  },
+  {
+    nom: "Zustand",
+    logo: "./Logo/zustand.svg",
+    background: "",
+    definition:
+      "Zustand est une bibliothèque légère de gestion d'état pour React, offrant une API simple et flexible pour gérer l'état global des applications.",
+  },
+  {
+    nom: "API Platform",
+    logo: "./Logo/apiplatform.svg",
+    background: "",
+    definition:
+      "API Platform est un framework basé sur Symfony permettant de créer rapidement des APIs robustes, documentées et sécurisées en respectant les standards REST et GraphQL.",
+  },
+  {
+    nom: "Fastify",
+    logo: "./Logo/fastify.svg",
+    background: "",
+    definition:
+      "Fastify est un framework web rapide et léger pour Node.js, conçu pour offrir des performances optimales et une gestion efficace des requêtes HTTP.",
   },
   {
     nom: "Sass",

@@ -10,10 +10,10 @@ import outilArray from '../../data/OutilsArray';
 
 import Bulle from '../Bulle/Bulle';
 
-function ProjetCard({ title, place, imgTitle, outil, gif, description, cara, gitHub, gitPage, Click }) {
+function ProjetCard({ place, project, Click }) {
 
 
-  const outilInfo = outilArray.find((item) => item.nom === outil);
+  const outilInfo = outilArray.find((item) => item.nom === project.outil);
 
   const logo = outilInfo.logo;
   const Background = outilInfo.background;
@@ -21,7 +21,7 @@ function ProjetCard({ title, place, imgTitle, outil, gif, description, cara, git
   const dispatch = useDispatch();
 
   const openModalHandler = () => {
-    dispatch(openModal({ title, imgTitle, outil, gitHub, gitPage }));
+    dispatch(openModal({ project }));
   };
 
 
@@ -57,8 +57,6 @@ function ProjetCard({ title, place, imgTitle, outil, gif, description, cara, git
 
     let bgX = 40 + 20 * X;
     let bgY = 40 + 20 * Y;
-
-    console.log(X, Y);
 
     setStyles({
       x: 100 * X + "%",
@@ -101,25 +99,25 @@ function ProjetCard({ title, place, imgTitle, outil, gif, description, cara, git
               <div className={`${Background} projetcard `}>
                 <div className="card-header">
                   <h3>
-                    <img src={imgTitle} alt='Titre du projet' />
+                    <img src={project.imgTitle} alt='Titre du projet' />
                   </h3>
                   <Bulle logo={logo} />
                 </div>
                 <div className="card-image">
                   <video autoPlay loop muted>
-                    <source src={gif} type="video/webm" />
+                    <source src={project.gif} type="video/webm" />
                     Votre navigateur ne prend pas en charge la vidéo au format WebM.
                   </video>
 
-                  <p>{cara}</p>
+                  <p>{project.cara}</p>
                 </div>
                 <div className="card-details">
                   <h4>Description : </h4>
-                  <p>{description}</p>
+                  <p>{project.description}</p>
                   <p className='enSavoir' onClick={openModalHandler} >En Savoir <i className="fa-regular fa-circle-xmark"></i></p>
                 </div>
               </div>
-              <p className='fincard' >©2023 Antunes J. David/Portfolio</p>
+              {/* <p className='fincard' >©2023 Antunes J. David/Portfolio</p> */}
             </div>
 
             <div className="cardEffect__layer1" style={{

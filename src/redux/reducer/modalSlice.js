@@ -1,33 +1,19 @@
-// modalSlice.js
-
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const modalSlice = createSlice({
-  name: 'modal',
+  name: "modal",
   initialState: {
     isOpen: false,
-    title: '',
-    imgTitle: '',
-    outil: '',
-    gitHub:'',
-    gitPage:''
+    project: null, // Stocke directement l'objet projet
   },
   reducers: {
     openModal: (state, action) => {
-        state.title = action.payload.title;
-        state.imgTitle = action.payload.imgTitle;
-        state.outil = action.payload.outil;
-        state.gitHub = action.payload.gitHub;
-        state.gitPage = action.payload.gitPage;
-        state.isOpen = true;
+      state.project = action.payload.project; // Stocke l'objet entier
+      state.isOpen = true;
     },
     closeModal: (state) => {
       state.isOpen = false;
-      state.title = '';
-      state.imgTitle = '';
-      state.outil = '';
-      state.gitHub = '';
-      state.gitPage = '';
+      state.project = null;
     },
   },
 });

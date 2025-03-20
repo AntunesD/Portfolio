@@ -11,8 +11,6 @@
 }
 
 #carousel {
-
-
   & .carousel_back {
     position: absolute;
     height: 100%;
@@ -22,7 +20,7 @@
   position: relative;
   height: 500px;
   top: 50%;
-  overflow: hidden;
+  // overflow: hidden;
   display: flex;
   align-items: center;
 
@@ -120,7 +118,7 @@
   background-color: $PrimaryColor;
   width: 110px;
   border-radius: 20px;
-  transform: rotate(45deg) translateX(40px) ;
+  transform: rotate(45deg) translateX(40px);
 }
 
 .fleche-droite-bas {
@@ -128,7 +126,7 @@
   background-color: $PrimaryColor;
   width: 110px;
   border-radius: 20px;
-  transform: rotate(-45deg) translateY(72px)  translateX(-31px);
+  transform: rotate(-45deg) translateY(72px) translateX(-31px);
 }
 
 .fleche-gauche-haut {
@@ -136,7 +134,7 @@
   background-color: $PrimaryColor;
   width: 110px;
   border-radius: 20px;
-  transform: rotate(135deg) translateX(40px) ;
+  transform: rotate(135deg) translateX(40px);
 }
 
 .fleche-gauche-bas {
@@ -144,7 +142,7 @@
   background-color: $PrimaryColor;
   width: 110px;
   border-radius: 20px;
-  transform: rotate(-135deg) translateY(-72px)  translateX(-31px);
+  transform: rotate(-135deg) translateY(-72px) translateX(-31px);
 }
 
 @media (max-width: 768px) {
@@ -166,24 +164,21 @@
   .buttons-right {
     right: 18px;
     & .fleche-droite-bas {
-      
-      transform: rotate(-60deg) translateY(72px)  translateX(-49px);
+      transform: rotate(-60deg) translateY(72px) translateX(-49px);
     }
-    & .fleche-droite-haut { 
-      transform: rotate(60deg) translateY(-23px)  translateX(35px);
+    & .fleche-droite-haut {
+      transform: rotate(60deg) translateY(-23px) translateX(35px);
     }
   }
   .buttons-left {
     left: 18px;
     & .fleche-gauche-bas {
-      
-      transform: rotate(-120deg) translateY(-72px)  translateX(-49px);
+      transform: rotate(-120deg) translateY(-72px) translateX(-49px);
     }
-    & .fleche-gauche-haut { 
-      transform: rotate(120deg) translateY(23px)  translateX(35px);
+    & .fleche-gauche-haut {
+      transform: rotate(120deg) translateY(23px) translateX(35px);
     }
   }
-
 }
 
 @media (max-width: 350px) {

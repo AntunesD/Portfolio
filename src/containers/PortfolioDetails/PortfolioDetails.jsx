@@ -15,12 +15,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { closeModal } from '../../redux/reducer/modalSlice';
 
 function PortfolioDetails() {
-  const modal = useSelector((state) => state.modal);
+  const { isOpen, project } = useSelector(state => state.modal);
   const dispatch = useDispatch();
+  console.log(project);
+  if (!project) {
+    return null;
+  }
 
   let dynamicComponent = null;
 
-  switch (modal.title) {
+  switch (project.title) {
     case 'Ohmyfood':
       dynamicComponent = <Ohmyfood />;
       break;
@@ -44,7 +48,7 @@ function PortfolioDetails() {
   const closeModalHandler = () => {
     dispatch(closeModal());
   };
-  const outil = modal.outil
+  const outil = project.outil
 
   let Background
   let logo;
@@ -56,13 +60,13 @@ function PortfolioDetails() {
   }
 
   return (
-    modal.isOpen && (
+    isOpen && (
       <div className="modal">
         <div className='bord'>
           <div className={`projet ${Background}`}>
             <h2 className="Portfolio_header">
               <Bulle logo={logo} />
-              <span><img src={modal.imgTitle} alt='Titre du projet' /></span>
+              <span><img src={project.imgTitle} alt='Titre du projet' /></span>
               <button onClick={closeModalHandler}>{window.innerWidth < 768 ? <i className="fa-solid fa-xmark"></i> : 'Fermer'} </button>
             </h2>
             <div className="contenue">
@@ -70,22 +74,22 @@ function PortfolioDetails() {
             </div>
             <div className="liens">
               {window.innerWidth < 768 ? (
-                <a href={modal.gitHub} target="_blank" rel="noreferrer">
+                <a href={project.gitHub} target="_blank" rel="noreferrer">
                   <img src="./Logo/github-mark.webp" alt="GitHub" />
                 </a>
               ) : (
-                <a href={modal.gitHub} target="_blank" rel="noreferrer">
+                <a href={project.gitHub} target="_blank" rel="noreferrer">
                   Liens vers le repo Github
                 </a>
               )}
 
-              {modal.gitPage && (
+              {project.gitPage && (
                 window.innerWidth < 768 ? (
-                  <a href={modal.gitPage} target="_blank" rel="noreferrer">
+                  <a href={project.gitPage} target="_blank" rel="noreferrer">
                     <img className="gitpage" src="./Logo/Github-pages.svg" alt="GitHub Pages" />
                   </a>
                 ) : (
-                  <a href={modal.gitPage} target="_blank" rel="noreferrer">
+                  <a href={project.gitPage} target="_blank" rel="noreferrer">
                     Liens vers Git Pages
                   </a>
                 )

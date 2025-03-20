@@ -1,0 +1,32 @@
+.cardEffect {
+  width: 320px;
+  height: 450px;
+  position: relative;
+ 
+  &__wrapper {
+      perspective: 600px;
+      position: absolute;
+      inset: 0;
+    }
+    &__3d {
+        transform: rotateY(var(--r-x)) rotateX(var(--r-y));
+        position: absolute;
+        inset: 0;
+    }
+    
+    /* soft light */
+    &__layer1 {
+        position: absolute;
+        border-radius: 10px;
+        inset: 0;
+        z-index: 20;
+        mix-blend-mode: soft-light;
+        background: radial-gradient(
+            farthest-corner circle at var(--x) var(--y),
+            rgba(255, 255, 255, 0.8) 10%,
+            rgba(255, 255, 255, 0.65) 20%,
+            rgba(255, 255, 255, 0) 90%
+            );
+        }
+        
+    }

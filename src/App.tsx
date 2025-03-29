@@ -14,7 +14,7 @@ import { useSelector } from 'react-redux';
 import "./utils/Dark-theme.scss"
 
 function App() {
-  const theme = useSelector(state => state.theme.mode);
+  const theme = useSelector((state: any) => state.theme.mode);
 
   const currentTheme = ` ${theme === 'dark' ? 'body_dark-theme' : 'body_light-theme '}`;
 
@@ -33,3 +33,5 @@ function App() {
 }
 
 export default App;
+
+

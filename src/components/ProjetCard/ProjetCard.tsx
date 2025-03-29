@@ -18,6 +18,18 @@ interface ProjetCardProps {
   Click: any;
 }
 
+interface StylesState {
+  x: string;
+  y: string;
+  bgX: string;
+  bgY: string;
+  rX: string;
+  rY: string;
+}
+
+type CustomCSS = React.CSSProperties & Record<string, string>;
+
+
 const ProjetCard : React.FC<ProjetCardProps> = ({ place, project, Click }) => {
 
 
@@ -40,9 +52,10 @@ const ProjetCard : React.FC<ProjetCardProps> = ({ place, project, Click }) => {
 
   /*pour cardEffect*/
 
-  const cardRef = useRef(null);
-  const transitionRef = useRef(null);
-  const [styles, setStyles] = useState({
+  const cardRef = useRef<HTMLDivElement>(null);
+  const transitionRef = useRef<HTMLDivElement>(null);
+  
+  const [styles, setStyles] = useState<StylesState>({
     x: "",
     y: "",
     bgX: "",
@@ -51,37 +64,43 @@ const ProjetCard : React.FC<ProjetCardProps> = ({ place, project, Click }) => {
     rY: "",
   });
 
-  const handleMouseMove = (e) => {
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const el = cardRef.current;
     const transition = transitionRef.current;
-
+  
+    if (!el || !transition) return;
+  
     transition.style.transition = "none";
-
+  
     let w = el.clientWidth;
     let h = el.clientHeight;
     let b = el.getBoundingClientRect();
-
+  
     let X = (e.clientX - b.left) / w;
     let Y = (e.clientY - b.top) / h;
-
+  
     let rX = -(X - 0.5) * 26;
     let rY = (Y - 0.5) * 26;
-
+  
     let bgX = 40 + 20 * X;
     let bgY = 40 + 20 * Y;
-
+  
     setStyles({
-      x: 100 * X + "%",
-      y: 100 * Y + "%",
-      bgX: bgX + "%",
-      bgY: bgY + "%",
-      rX: rX + "deg",
-      rY: rY + "deg",
+      x: `${100 * X}%`,
+      y: `${100 * Y}%`,
+      bgX: `${bgX}%`,
+      bgY: `${bgY}%`,
+      rX: `${rX}deg`,
+      rY: `${rY}deg`,
     });
   };
+  
 
   const handleMouseOut = () => {
     const transition = transitionRef.current;
+
+    if (!transition) return;
 
     transition.style.transition = "all 0.5s";
     setStyles({
@@ -104,7 +123,7 @@ const ProjetCard : React.FC<ProjetCardProps> = ({ place, project, Click }) => {
           <div ref={transitionRef} className="cardEffect__3d" style={{
             "--r-x": styles.rX,
             "--r-y": styles.rY
-          }}>
+          } as CustomCSS}>
 
 
             <div className={`bordercard `} >
@@ -135,7 +154,7 @@ const ProjetCard : React.FC<ProjetCardProps> = ({ place, project, Click }) => {
             <div className="cardEffect__layer1" style={{
               "--x": styles.x,
               "--y": styles.y
-            }} ></div>
+            } as CustomCSS} ></div>
 
           </div>
         </div>

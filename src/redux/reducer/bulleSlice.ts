@@ -13,6 +13,6 @@ const bulleSlice = createSlice({
 });
 
 export const { toggleBullComics } = bulleSlice.actions;
-export const selectIsBullComicsVisible = (state) => state.bulle.isBullComicsVisible;
+export const selectIsBullComicsVisible = (state: any) => state.bulle.isBullComicsVisible;
 
 export default bulleSlice.reducer;

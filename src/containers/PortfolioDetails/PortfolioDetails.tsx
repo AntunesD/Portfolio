@@ -4,18 +4,19 @@ import outilArray from "../../data/OutilsArray";
 import Bulle from "../../components/Bulle/Bulle";
 
 /**Importation des pages de détails***/
-import Ohmyfood from '../../pages/Ohmyfood';
-import Kasa from '../../pages/Kasa';
+
+
+import { useDispatch, useSelector } from 'react-redux';
+import { closeModal } from '../../redux/reducer/modalSlice';
+import Ohmyfood from "../../pages/Ohmyfood";
+import Kasa from "../../pages/Kasa";
 import NinaCarducci from "../../pages/NinaCarducci";
 import SSEvents from "../../pages/SSEvents";
 import ArgentBank from "../../pages/ArgenBank";
 import Travaux from "../../pages/Travaux";
 
-import { useDispatch, useSelector } from 'react-redux';
-import { closeModal } from '../../redux/reducer/modalSlice';
-
 function PortfolioDetails() {
-  const { isOpen, project } = useSelector(state => state.modal);
+  const { isOpen, project } = useSelector((state: any) => state.modal);
   const dispatch = useDispatch();
   console.log(project);
   if (!project) {
@@ -65,7 +66,7 @@ function PortfolioDetails() {
         <div className='bord'>
           <div className={`projet ${Background}`}>
             <h2 className="Portfolio_header">
-              <Bulle logo={logo} />
+              <Bulle logo={logo || "Logo introuvable"} />
               <span><img src={project.imgTitle} alt='Titre du projet' /></span>
               <button onClick={closeModalHandler}>{window.innerWidth < 768 ? <i className="fa-solid fa-xmark"></i> : 'Fermer'} </button>
             </h2>

@@ -2,7 +2,7 @@ import "./Bulle.scss";
 
 interface BulleProps {
     logo: string;
-    name: string;
+    name?: string;
 }
 
 

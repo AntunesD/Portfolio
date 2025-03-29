@@ -6,7 +6,7 @@ import Bulle from "../components/Bulle/Bulle";
 
 function Ohmyfood() {
 
-  const filterOutilsParNoms = (nomsRecherche) => {
+  const filterOutilsParNoms = (nomsRecherche : string[]) => {
     return outilArray.filter((outil) => nomsRecherche.includes(outil.nom));
   };
 

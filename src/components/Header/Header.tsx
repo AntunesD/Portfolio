@@ -1,12 +1,14 @@
 import "./Header.scss";
-import MenuMobile from "../MenuMobile/MenuMobile";
+
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleTheme } from '../../redux/reducer/themeSlice';
+
+import MenuMobile from "../MenuMobile/MenuMobile";
+import { toggleTheme } from "../../redux/reducer/themeSlice";
 
 function Header() {
 
   const dispatch = useDispatch();
-  const theme = useSelector(state => state.theme.mode);
+  const theme = useSelector((state: any) => state.theme.mode);
 
   const handleThemeToggle = () => {
     dispatch(toggleTheme());

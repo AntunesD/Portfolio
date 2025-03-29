@@ -4,16 +4,28 @@ import './CardEffect.scss'
 import React, { useRef, useState } from "react";
 
 import { useDispatch } from 'react-redux';
-import { openModal } from '../../redux/reducer/modalSlice';
 
-import outilArray from '../../data/OutilsArray';
+
+
 
 import Bulle from '../Bulle/Bulle';
+import { openModal } from '../../redux/reducer/modalSlice';
+import outilArray from '../../data/OutilsArray';
 
-function ProjetCard({ place, project, Click }) {
+interface ProjetCardProps {
+  place: string;
+  project: any;
+  Click: any;
+}
+
+const ProjetCard : React.FC<ProjetCardProps> = ({ place, project, Click }) => {
 
 
   const outilInfo = outilArray.find((item) => item.nom === project.outil);
+
+  if (!outilInfo) {
+    throw new Error(`Outil non trouvé pour le projet ${project.nom}`);
+  }
 
   const logo = outilInfo.logo;
   const Background = outilInfo.background;

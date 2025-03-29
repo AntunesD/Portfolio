@@ -1,7 +1,12 @@
 import "./Bulle.scss";
 
+interface BulleProps {
+    logo: string;
+    name: string;
+}
 
-function Bulle({ logo, name }) {
+
+const Bulle: React.FC<BulleProps> = ({ logo, name }) => {
 
     return (
         <div className="bulle" >
